@@ -16,3 +16,18 @@
     }
     updateCartCount();
 </script>
+
+
+<script>
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
+        document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
+    }
+
+    function handleSubmit(btn) {
+        document.querySelector('.contact-form').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+    }
+
+    updateCartCount();
+</script>
