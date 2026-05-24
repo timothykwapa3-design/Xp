@@ -15,10 +15,7 @@
         setTimeout(()=>{btn.textContent='Add to Cart';btn.style.background='';},1500);
     }
     updateCartCount();
-</script>
-
-
-<script>
+ 
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
         document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
@@ -30,18 +27,14 @@
     }
 
     updateCartCount();
-</script>
 
 
-<script>
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
         document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
     }
     updateCartCount();
-</script>
 
-<script>
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('ogCart')||'[]');
         document.getElementById('cartCount').textContent = cart.reduce((a,i)=>a+i.qty,0);
@@ -63,11 +56,8 @@
             g.style.display=(cat==='all'||g.id===cat)?'block':'none';
         });
     }
-    updateCartCount();
-</script>
+    updateCartCount(); 
 
-
-<script>
     const SHIPPING = 80;
     const VAT_RATE = 0.14;
     let promoApplied = false;
@@ -182,9 +172,7 @@
     }
 
     renderCart();
-</script>
 
-<script>
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('ogCart') || '[]');
         document.getElementById('cartCount').textContent = cart.reduce((a, i) => a + i.qty, 0);
